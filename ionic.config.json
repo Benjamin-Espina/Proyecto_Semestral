@@ -1,0 +1,7 @@
+{
+  "name": "yuumi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
