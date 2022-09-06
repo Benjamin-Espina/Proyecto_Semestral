@@ -9,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  constructor(private menu:MenuController) { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {
   }

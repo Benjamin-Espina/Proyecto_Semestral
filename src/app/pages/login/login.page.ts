@@ -11,10 +11,10 @@ export class LoginPage implements OnInit {
   usuario={
     username:'',
     password:'',
-  }
+  };
   constructor(
     private router: Router,
-    private alertController:AlertController,
+    private alertController: AlertController,
     ){}
   ngOnInit() {
   }
@@ -37,13 +37,14 @@ export class LoginPage implements OnInit {
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
-      subHeader: 'Important message',
-      message: 'This is an alert!',
+      message: 'Usuario no encontrado',
       buttons: ['OK'],
       mode: 'ios',
       backdropDismiss: false,
     });
-
     await alert.present();
+  }
+  goToRegistrar(){
+    this.router.navigate(['registro']);
   }
 }
