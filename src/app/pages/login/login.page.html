@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title slot="secondary">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #miform="ngForm" (ngSubmit)="onSubmit()" >
+    <ion-text color="primary">
+      <h1>Inicio de Sesión</h1>
+    </ion-text>
+    <ion-item>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input required="" clearInput [(ngModel)]="usuario.username" name="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input required="" type="password" clearInput [(ngModel)]="usuario.password" name="password"></ion-input>
+    </ion-item>
+    <ion-button  expand="block" fill="solid" shape="round" type="submit" [disabled]="miform.invalid">
+      Iniciar Sesión
+    </ion-button>
+  </form>
+  <form>
+    <ion-text color="primary">
+      <h5>Estado del formulario {{miform.status}}</h5>
+    </ion-text>
+  </form>
+  
+</ion-content>
